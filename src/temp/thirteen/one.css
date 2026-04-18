@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  height: 64px;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-weight: 600;
+  z-index: 1000;
+}
+
+.content {
+  padding: 16px;
+}
+
+.box {
+  height: 200px;
+  background: #e5e7eb;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

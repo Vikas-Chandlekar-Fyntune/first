@@ -1,0 +1,17 @@
+:root {
+  --navbar-height: 60px;
+}
+
+/* Tablet */
+@media (max-width: 993px) {
+  :root {
+    --navbar-height: 72px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  :root {
+    --navbar-height: 48px;
+  }
+}

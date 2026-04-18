@@ -1,0 +1,43 @@
+/* Header at top */
+.page-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  background: white;
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+
+  height: 64px; /* IMPORTANT: fixed height */
+}
+
+/* Main below header */
+.page-main {
+  padding: 16px;
+}
+
+/* Two-column layout */
+.layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Left div – sticky after header */
+.sidebar {
+  width: 30%;
+  position: sticky;
+  top: 64px; /* SAME AS HEADER HEIGHT */
+  background: #f5f5f5;
+  padding: 16px;
+  border-radius: 8px;
+
+  /* 👇 Key lines */
+  max-height: calc(100vh - 64px - 16px);
+  overflow-y: auto;
+}
+
+/* Right div */
+.content {
+  width: 70%;
+}

@@ -1,0 +1,29 @@
+/* Page just for demo spacing */
+.page {
+  padding: 40px;
+}
+
+/* 👇 This is the container */
+.wrapper {
+  width: 600px; /* try changing to 400px */
+  padding: 20px;
+  border: 2px solid #000;
+
+  /* Enable container queries */
+  container-type: inline-size;
+}
+
+/* Card default style */
+.card {
+  padding: 20px;
+  background-color: lightblue;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* 👇 Container Query */
+@container (max-width: 500px) {
+  .card {
+    background-color: lightcoral;
+  }
+}

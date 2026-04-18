@@ -1,0 +1,147 @@
+.wrapper2 {
+  container-type: inline-size;
+}
+
+.card2 {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: aqua;
+
+  /* Desktop grid (5 items) */
+  grid-template-areas:
+    "media"
+    "title"
+    "content"
+    "actions"
+    "footer";
+}
+
+/* ===== Desktop Nested Layout ===== */
+
+.media {
+  grid-area: media;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  grid-area: actions;
+  display: flex;
+  gap: 12px;
+}
+
+.title {
+  grid-area: title;
+}
+
+.content {
+  grid-area: content;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* ===== 📱 Mobile: < 600px ===== */
+
+@container (max-width: 600px) {
+  .card2 {
+    background-color: green;
+    /* 7 main grid items */
+    grid-template-areas:
+      "image"
+      "title"
+      "btn1"
+      "btn2"
+      "checkbox"
+      "content"
+      "footer";
+  }
+
+  /* Break nested structure */
+  .media {
+    display: contents;
+  }
+
+  .media img {
+    grid-area: image;
+  }
+
+  .media input {
+    grid-area: checkbox;
+  }
+
+  .actions {
+    display: contents;
+  }
+
+  .actions button:first-child {
+    grid-area: btn1;
+  }
+
+  .actions button:last-child {
+    grid-area: btn2;
+    width: fit-content;
+    justify-self: end;
+  }
+}
+
+@container (max-width: 600px) {
+  .card2 {
+    background-color: green;
+
+    grid-template-areas:
+      "footer"
+      /* "image" */
+      "title"
+      "btn1"
+      "btn2"
+      "checkbox"
+      "content";
+  }
+
+  /* Break nested structure */
+  .media {
+    display: contents;
+  }
+
+  .media img {
+    display: none;
+    /* grid-area: image; */
+    /* justify-self: center; */
+    /* place-self: center; */
+  }
+
+  .media input {
+    grid-area: checkbox;
+  }
+
+  .actions {
+    display: contents;
+  }
+
+  .actions button:first-child {
+    grid-area: btn1;
+  }
+
+  .actions button:last-child {
+    grid-area: btn2;
+    justify-self: end; /* or end if you want */
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+
+  .title {
+    grid-area: title;
+  }
+
+  .content {
+    grid-area: content;
+  }
+}

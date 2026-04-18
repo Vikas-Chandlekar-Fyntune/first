@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.group-label {
+  grid-column: 1 / -1; /* 🔥 spans full row */
+  font-weight: 600;
+  padding: 6px 10px;
+}
+
+.child {
+  padding: 10px;
+  outline: 1px solid red;
+}

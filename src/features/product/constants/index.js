@@ -1,0 +1,3 @@
+const MAX_COMPARE_ITEMS = 2;
+
+export { MAX_COMPARE_ITEMS };

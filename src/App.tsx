@@ -1,7 +1,14 @@
-import PersonPage from "./features/person/pages/PersonPage";
+import Temp from "./temp";
+import Hooks from "./hooks";
 
 const App = () => {
-  return <PersonPage />;
+  return (
+    <>
+      {/* <ProductPage /> */}
+      <Temp />
+      {/* <Hooks /> */}
+    </>
+  );
 };
 
 export default App;

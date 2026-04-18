@@ -1,0 +1,39 @@
+/* Root container for both columns */
+.layout-container {
+  display: flex;
+  gap: 24px;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Left Side */
+.layout-left {
+  position: relative;
+}
+
+/* Sticky element inside left side */
+.layout-left-sticky {
+  position: sticky;
+  z-index: 10;
+  background: #ffffff;
+}
+
+/* Right Side (scrolls with page) */
+.layout-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Responsive breakpoint (example) */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .layout-left,
+  .layout-right {
+    width: 100% !important;
+  }
+}

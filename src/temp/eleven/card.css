@@ -1,0 +1,79 @@
+/* Enable container */
+.wrapper1 {
+  container-type: inline-size;
+}
+
+/* Desktop layout */
+.card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  grid-template-areas:
+    "media"
+    "title"
+    "content"
+    "actions";
+}
+
+/* Media row (image + checkbox) */
+.media {
+  grid-area: media;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.media img {
+  max-width: 120px;
+}
+
+.checkbox {
+  flex-shrink: 0;
+}
+
+/* Other sections */
+.title {
+  grid-area: title;
+}
+.content {
+  grid-area: content;
+}
+
+.actions {
+  grid-area: actions;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* 📱 Container Query ONLY */
+@container (max-width: 500px) {
+  .card {
+    background: #ffecec;
+
+    grid-template-areas:
+      "media"
+      "title"
+      "actions"
+      "content"
+      "checkbox";
+  }
+
+  /* Move checkbox OUT of media using grid */
+  .media {
+    display: contents; /* 🔑 magic */
+  }
+
+  .checkbox {
+    grid-area: checkbox;
+    justify-self: start;
+    margin-top: 8px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
